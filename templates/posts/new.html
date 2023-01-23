@@ -3,11 +3,14 @@
 {% block title %}New Post{% endblock title %}
 
 {% block content %}
-<h1>New Post</h1>
-
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" class="btn btn-success" value="Create">
-</form>
+<div class="mb-4">
+    <h1>New Post</h1>
+</div>
+<div class="h4 pb-2 mb-4 text-danger border-bottom border-danger">
+    <form method="POST" class="form-control border-success" id="exampleFormControlInput1">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-success" value="Create">
+    </form>
+</div>
 {% endblock content %}
